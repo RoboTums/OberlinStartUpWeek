@@ -8,7 +8,7 @@ from pymongo import MongoClient
 from flask_bcrypt import Bcrypt
 
 
-app =Flask(__name__, template_folder="templates/retemplate")
+app =Flask(__name__, template_folder="/")
 
 # starts mongo
 #client = MongoClient('mongodb://Tumas:labanaktis34@ds259912.mlab.com:59912/mindpairbigdata')
@@ -92,6 +92,6 @@ def pair():
 	return render_template('pair.html')
 
 
-@app.route('/profile'):
+@app.route('/profile')
 def profile():
 	return render_template('profile.html')
