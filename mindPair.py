@@ -6,7 +6,7 @@ from flask_pymongo import PyMongo
 #from hash import hasher
 from pymongo import MongoClient
 from flask_bcrypt import Bcrypt
-
+import flask_pyscss
 
 app =Flask(__name__, template_folder="./")
 
@@ -19,6 +19,16 @@ mongo = PyMongo(app)
 
 bcrypt = Bcrypt(app)
 users = mongo.db.users
+assets = Environment(app)
+assets.url=app.static_url_path
+scss= Bundle('index.scss', filters='pycss', output='all.css')
+assets.config['PYSCSS_LOAD_PATHS'] = assets.load_path
+assets.config['PYSCSS_STATIC_URL'] = assets.url
+assets.config['PYSCSS_STATIC_ROOT'] = assets.directory
+assets.config['PYSCSS_ASSETS_URL'] = assets.url
+assets.config['PYSCSS_ASSETS_ROOT'] = assets.directory
+
+assets.register('scss_all', scss)
 
 login_manager = flask_login.LoginManager()
 login_manager.init_app(app)
@@ -95,3 +105,11 @@ def pair():
 @app.route('/profile')
 def profile():
 	return render_template('profile.html')
+
+@app.route('/courses')
+def courses():
+	return render_template('courses.html')
+
+@app.route('/user')
+def user():
+	return render_template('user.html')
