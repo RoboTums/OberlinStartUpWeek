@@ -12,16 +12,20 @@ app =Flask(__name__, template_folder="./")
 
 # Start mongo
 #client = MongoClient('mongodb://Tumas:labanaktis34@ds259912.mlab.com:59912/mindpairbigdata')
-app.config['Mongo_DBNAME']='mindpairbigdata'
-app.config['MONGO_URI'] = 'mongodb://Tumas:labanaktis34@ds259912.mlab.com:59912/mindpairbigdata'
+#app.config['Mongo_DBNAME']='mindpairbigdata'
+app.config['MONGO_URI'] = 'mongodb://tirissou:securepassword123@ds111993.mlab.com:11993/mindpair'
 
-mongo = PyMongo(app)
+db = PyMongo(app).db
+courses = db.courses.find()
+for course in courses:
+    print(course)
+
 
 # TODO: Populate mongodb with udemy courses 
 
 # Setup login + users 
 bcrypt = Bcrypt(app)
-users = mongo.db.users
+users = db.users
 
 login_manager = flask_login.LoginManager()
 login_manager.init_app(app)
