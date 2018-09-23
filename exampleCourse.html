@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="static/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>MindPair</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="static/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="static/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="static/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
+
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="static/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body>
+
+
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="static/sidebar-5.jpg">
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    mindpair
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li class="active">
+                    <a href="dashboard.html">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <i class="pe-7s-user"></i>
+                        <p>User Profile</p>
+                    </a>
+                </li>
+                 
+                <li>
+                    <a href="/pair">
+                        <i class="pe-7s-science"></i>
+                        <p>Pairs</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/courses">
+                        <i class="pe-7s-map-marker"></i>
+                        <p>Find Courses</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+		<nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Table List</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-dashboard"></i>
+								<p class="hidden-lg hidden-md">Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-globe"></i>
+                                    <b class="caret hidden-sm hidden-xs"></b>
+                                    <span class="notification hidden-sm hidden-xs">5</span>
+									<p class="hidden-lg hidden-md">
+										5 Notifications
+										<b class="caret"></b>
+									</p>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Notification 1</a></li>
+                                <li><a href="#">Notification 2</a></li>
+                                <li><a href="#">Notification 3</a></li>
+                                <li><a href="#">Notification 4</a></li>
+                                <li><a href="#">Another notification</a></li>
+                              </ul>
+                        </li>
+                        <li>
+                           <a href="">
+                                <i class="fa fa-search"></i>
+								<p class="hidden-lg hidden-md">Search</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                           <a href="">
+                               <p>Account</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <p>
+										Dropdown
+										<b class="caret"></b>
+									</p>
+
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                              </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>Log out</p>
+                            </a>
+                        </li>
+						<li class="separator hidden-lg hidden-md"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Neural Networks and Deep Learning</h4>
+                                <p class="category">Taught by Andrew Ng
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>Ranking</th>
+                                        <th> Free? </th>
+                                    	<th>Name</th>
+                                    	<th>Average Rating</th>
+                                    	<th>Website</th>
+                                    	<th>Insutition</th> 
+                                        <th>Estimated Time to finish</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr class='clickable-row' data-href='https://www.coursera.org/learn/neural-networks-deep-learning'>
+                                        	<td>1</td>
+                                                                                        <td>Yes</td>
+
+                                        	<td>Neural Networks and Deep Learning</td>
+                                        	<td>4.9</td>
+                                        	<td>Cousera</td>
+                                        	<td>DeepLearning.ai</td>
+                                            <td> 16 weeks</td>
+                                        </tr>
+                                        <tr class='clickable-row' data-href='https://www.udacity.com/course/deep-learning--ud730'>
+                                        	<td>2</td>
+                                              <td>Yes</td>
+                                        	<td>DeepLearning Intoduction</td>
+                                        	<td>4.8</td>
+                                        	<td>Udacity</td>
+                                        	<td>Google</td>
+                                            <td>12 weeks</td>
+                                        </tr>
+                                        <tr class='clickable-row' data-href='https://www.kadenze.com/courses/creative-applications-of-deep-learning-with-tensorflow/info'>
+                                        	<td>3</td>
+                                              <td>Yes</td>
+                                        	<td>Creative application of Deep Learning with Tensorflow</td>
+                                        	<td>4.8</td>
+                                        	<td>Parag Mital</td>
+                                        	<td>Kadenze</td>           
+                                            <td>8 Weeks</td>
+
+
+                                        </tr>
+                                        <tr class='clickable-row' data-href='https://www.coursera.org/learn/intro-practical-deep-learning?siteID=SAyYsTvLiGQ-cu7e5HmyPoMHiM0nd1IDMg&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ'>
+                                        	<td>4</td>
+                                              <td>Yes</td>
+                                        	<td>Practical Deep Learning</td>
+                                        	<td>4.7</td>
+                                        	<td>Intel</td>
+                                        	<td>Coursera</td>
+                                           <td>12 weeks</td>
+                                        </tr>
+                                        <tr class='clickable-row' data-href='https://www.edx.org/course/deep-learning-with-python-and-pytorch?source=aw&awc=6798_1537724178_0adf80a0528c8f3ed67d2379305b9ba8&utm_source=aw&utm_medium=affiliate_partner&utm_content=text-link&utm_term=301045_https%3A%2F%2Fwww.class-central.com%2F'>
+                                        	<td>5</td>
+                                              <td>Yes</td>
+                                        	<td>Deep Learning with Python and PyTorch</td>
+                                        	<td>4.7</td>
+                                        	<td>IBM</td>
+                                        	<td>edX</td>
+                                            <td>10 weeks</td>
+        
+                                        </tr>
+                                        <tr class='clickable-row' data-href='https://www.coursera.org/specializations/machine-learning?siteID=SAyYsTvLiGQ-xMDzavfGBz6kkX_05pY2oQ&utm_content=10&utm_medium=partners&utm_source=linkshare&utm_campaign=SAyYsTvLiGQ'>
+                                        	<td>6</td>
+                                              <td>Yes</td>
+                                        	<td>Machine Learning</td>
+                                        	<td>$4.6</td>
+                                        	<td>University of Washington</td>
+                                        	<td>Coursera</td>
+                                            <td>7 weeks </td>  
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                   
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                UserProfile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Pairs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                               Courses
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">MindPair</a>, Connecting the world with education!
+                </p>
+            </div>
+        </footer>
+
+
+    </div>
+</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+});
+</script>
+</body>
+    <!--   Core JS Files   -->
+    <script src="static/jquery.3.2.1.min.js" type="text/javascript"></script>
+	<script src="static/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Charts Plugin -->
+	<script src="static/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="static/bootstrap-notify.js"></script>
+
+</html>
