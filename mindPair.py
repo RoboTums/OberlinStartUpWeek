@@ -101,10 +101,14 @@ def pair():
 	return render_template('Pair.html')
 
 
-@app.route('/profile')
-def profile():
-	return render_template('profile.html')
+@app.route('/exampleCourse')
+def exampleCourse ():
+	return render_template('exampleCourse.html')
 
 @app.route('/course_finder')
 def course_finder():
 	return render_template('course_finder.html')
+
+@app.route('/course_finder/results')
+def results():
+	return render_template('exampleCourse.html')
