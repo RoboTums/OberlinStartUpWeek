@@ -6,32 +6,31 @@ from flask_pymongo import PyMongo
 #from hash import hasher
 from pymongo import MongoClient
 from flask_bcrypt import Bcrypt
-import flask_pyscss
+
 
 app =Flask(__name__, template_folder="./")
 
-# starts mongo
+# Start mongo
 #client = MongoClient('mongodb://Tumas:labanaktis34@ds259912.mlab.com:59912/mindpairbigdata')
-app.config['Mongo_DBNAME']='mindpairbigdata'
-app.config['MONGO_URI'] = 'mongodb://Tumas:labanaktis34@ds259912.mlab.com:59912/mindpairbigdata'
+#app.config['Mongo_DBNAME']='mindpairbigdata'
+app.config['MONGO_URI'] = 'mongodb://tirissou:securepassword123@ds111993.mlab.com:11993/mindpair'
 
-mongo = PyMongo(app)
+db = PyMongo(app).db
+courses = db.courses.find()
+for course in courses:
+    print(course)
 
+
+# TODO: Populate mongodb with udemy courses 
+
+# Setup login + users 
 bcrypt = Bcrypt(app)
-users = mongo.db.users
-assets = Environment(app)
-assets.url=app.static_url_path
-scss= Bundle('index.scss', filters='pycss', output='all.css')
-assets.config['PYSCSS_LOAD_PATHS'] = assets.load_path
-assets.config['PYSCSS_STATIC_URL'] = assets.url
-assets.config['PYSCSS_STATIC_ROOT'] = assets.directory
-assets.config['PYSCSS_ASSETS_URL'] = assets.url
-assets.config['PYSCSS_ASSETS_ROOT'] = assets.directory
-
-assets.register('scss_all', scss)
+users = db.users
 
 login_manager = flask_login.LoginManager()
 login_manager.init_app(app)
+
+# TODO: Populate database with random users
 
 app.secret_key = os.urandom(24)
 
@@ -104,12 +103,4 @@ def pair():
 
 @app.route('/profile')
 def profile():
-	return render_template('profile.html')
-
-@app.route('/courses')
-def courses():
-	return render_template('courses.html')
-
-@app.route('/user')
-def user():
-	return render_template('user.html')
+return render_template('profile.html')
