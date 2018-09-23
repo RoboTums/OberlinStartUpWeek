@@ -98,9 +98,13 @@ def dashboard():
 @app.route("/pair")
 def pair():
 	# insert recommender system lol
-	return render_template('pair.html')
+	return render_template('Pair.html')
 
 
 @app.route('/profile')
 def profile():
 	return render_template('profile.html')
+
+@app.route('/course_finder')
+def course_finder():
+	return render_template('course_finder.html')
